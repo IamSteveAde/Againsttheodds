@@ -120,6 +120,11 @@ export function Footer() {
                   Refund Policy
                 </Link>
               </li>
+              <li>
+                <Link href="/cancellation" className="hover:text-gray-900 dark:hover:text-white transition">
+                  Cancellation Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
