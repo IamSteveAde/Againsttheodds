@@ -1,7 +1,45 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { StyledImage } from "@/components/styled-image";
-import Link from "next/link";
+
+export function StickyHero() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <section className="relative w-full h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-950">
+      <div className="text-center px-4 max-w-3xl">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-sky-400 to-gray-300 bg-clip-text text-transparent">
+          AGAINST THE ODDS
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4">
+          My Journey Through Storms and Triumphs
+        </p>
+        <p className="text-xl sm:text-2xl text-gray-900 dark:text-white mb-10 font-semibold">
+          by Dozy Mmobuosi
+        </p>
+        <button
+          onClick={() => setShowModal(true)}
+          className="px-10 py-4 border border-gray-400 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+        >
+          Buy Book
+        </button>
+      </div>
+    </section>
+  );
+}
 
 export function BookHighlight() {
+  const [showModal, setShowModal] = useState(false); // Added state here
+
   return (
     <section className="py-12 md:py-20 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4 grid gap-8">
@@ -26,12 +64,7 @@ export function BookHighlight() {
             <span className="text-red-600 dark:text-red-500 font-semibold"> Against the Odds</span> is a masterclass
             in cultivating a winning mindset and a reminder that no challenge is too great to overcome.
           </p>
-          <Link
-            href="#buy"
-            className="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300"
-          >
-            Buy Book
-          </Link>
+         
         </div>
       </div>
     </section>

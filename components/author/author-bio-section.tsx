@@ -68,17 +68,7 @@ export function AuthorBioSection() {
           </div>
 
           {/* Button */}
-          <div className="flex md:block justify-center md:justify-start">
-            <button className="
-              mt-10 px-8 py-3 
-              border border-blue-300 rounded-xl 
-              text-lg font-semibold 
-              hover:bg-blue-600 hover:border-blue-600 
-              transition-all
-            ">
-              Learn More
-            </button>
-          </div>
+          
         </div>
 
       </div>
