@@ -1,6 +1,8 @@
 import { StyledImage } from "@/components/styled-image";
 import Link from "next/link";
 
+
+
 export function BookHighlightSection() {
   return (
     <section className="py-16 bg-white dark:bg-gray-950">
@@ -31,13 +33,7 @@ export function BookHighlightSection() {
             readers to defy challenges and achieve greatness.
           </p>
 
-          {/* Button */}
-          <Link
-            href="#buy"
-            className="inline-block border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-xl"
-          >
-            Buy Book
-          </Link>
+         
         </div>
       </div>
     </section>
