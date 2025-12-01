@@ -136,10 +136,7 @@ export function Footer() {
                   info@dozymmobuosi.com
                 </a>
               </li>
-              <li className="flex items-start gap-2">
-                <Phone size={16} className="mt-0.5 flex-shrink-0 text-red-600 dark:text-red-500" />
-                <span>+234 123 456 7890</span>
-              </li>
+              
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0 text-red-600 dark:text-red-500" />
                 <span>Lagos, Nigeria</span>

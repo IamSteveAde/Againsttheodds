@@ -1,91 +1,87 @@
-import { StyledImage } from "@/components/styled-image"
+import { StyledImage } from "@/components/styled-image";
 
 export function AuthorBioSection() {
   return (
-    <section className="py-12 md:py-20">
-      <div className="container mx-auto px-4">
-        {/* Heading Section */}
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-gray-600 dark:text-gray-400 italic mb-2">Author Bio</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Dozy Mmobuosi
-          </h2>
+    <section className="flex justify-center py-20 bg-gray-100 dark:bg-gray-900">
+      <div className="
+        relative w-[90%] md:w-4/5 
+        bg-gradient-to-r from-[#071533] via-[#0d2763] to-[#133b8a] 
+        rounded-xl overflow-hidden shadow-2xl 
+        flex flex-col md:flex-row items-center
+        py-10 md:py-0
+      ">
+        
+        {/* Left: Image */}
+        <div className="flex-1 flex items-center justify-center w-full md:h-full px-6 md:px-0">
+          <StyledImage
+            src="/images/dozym.jpg"
+            alt="Dozy Mmobuosi"
+            width={450}
+            height={650}
+            variant="portrait"
+            className="
+              w-full max-w-[350px] md:max-w-[80%] 
+              h-auto object-cover rounded-xl shadow-2xl
+            "
+          />
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left: Bio Text */}
-          <div className="space-y-4 text-gray-600 dark:text-gray-400 order-2 md:order-1">
+        {/* Right: Text */}
+        <div className="
+          flex-1 text-white 
+          px-6 md:px-10 
+          py-10 
+          flex flex-col justify-center 
+          max-w-[95%] md:max-w-[80%]
+        ">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">
+            Dozy Mmobuosi
+          </h2>
+
+          <p className="text-lg md:text-xl mb-4 italic text-blue-200 text-center md:text-left">
+            Author Bio
+          </p>
+
+          <div className="space-y-4 text-base md:text-lg leading-relaxed text-center md:text-left">
             <p>
               Dozy Mmobuosi is a global business leader and technology innovator. From humble beginnings in Nigeria, he
-              has built companies across telecommunications, food & beverages, artificial intelligence, finance, and
-              energy.
+              has built companies across telecommunications, food & beverages, artificial intelligence, finance,
+              and energy.
             </p>
             <p>
               As the founder of Tingo Mobile, he helped millions of farmers access mobile technology. Through Tingo
               Foods and Tingo BV PLC, he has created value chains that feed communities and build Africa's FMCG
-              industry. With Equity Health Group, he is advancing healthcare access across the continent.
+              industry.
             </p>
             <p>
               Today, Dozy leads in artificial intelligence through Tingo AI, developing Africa's first AI-powered radio
-              station, generative AI systems, and large-scale AI data centers. His ventures reflect his core belief:
-              Africa can lead the world in innovation.
+              station, generative AI systems, and large-scale AI data centers.
             </p>
             <p>
-              Dozy first rose to prominence as the founder of Tingo Mobile, a trailblazing fintech and agri-tech company
-              that provided mobile devices, digital services, and financial access to millions of smallholder farmers in
-              Nigeria. Through this venture, he pioneered one of Africa's earliest large-scale mobile-based platforms
-              enabling farmers to connect to markets, access credit, and improve productivity.
+              Dozy first rose to prominence as the founder of Tingo Mobile, a trailblazing fintech and agri-tech
+              company that provided mobile devices and financial access to millions of smallholder farmers in Nigeria.
             </p>
             <p>
-              His success in building Tingo into a multi-billion-dollar enterprise established him as a key figure at
-              the intersection of technology and inclusive economic development.
+              His success in building Tingo into a multi-billion-dollar enterprise established him as a key figure in
+              Africa’s economic development.
             </p>
           </div>
 
-          {/* Right: Floating Images Layout */}
-          <div className="relative h-96 md:h-[500px] w-full order-1 md:order-2">
-            {/* Center Book Cover */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <StyledImage
-                src="/images/sharp.jpeg"
-                alt="Against The Odds Book Cover"
-                width={280}
-                height={400}
-                variant="book"
-                priority
-                className="drop-shadow-2xl"
-              />
-            </div>
-
-            {/* Top Left - Formal Portrait */}
-            <div className="absolute top-0 left-0 w-24 h-32 md:w-32 md:h-40 z-20 -translate-y-2 -translate-x-2 hidden sm:block">
-              <StyledImage
-                src="/images/dozym.jpg"
-                alt="Dozy Mmobuosi - Formal Portrait"
-                width={120}
-                height={160}
-                variant="portrait"
-                className="w-full h-full object-cover rounded-lg shadow-lg border-4 border-white dark:border-gray-900 transform hover:scale-105 transition-transform"
-              />
-            </div>
-
-            {/* Mobile: Single image below book */}
-            <div className="sm:hidden flex gap-4 mt-96 justify-center">
-              <div className="w-20 h-28">
-                <StyledImage
-                  src="/images/dozym.jpg"
-                  alt="Dozy Mmobuosi - Formal Portrait"
-                  width={80}
-                  height={110}
-                  variant="portrait"
-                  className="w-full h-full object-cover rounded-lg shadow-lg border-2 border-white dark:border-gray-900"
-                />
-              </div>
-            </div>
+          {/* Button */}
+          <div className="flex md:block justify-center md:justify-start">
+            <button className="
+              mt-10 px-8 py-3 
+              border border-blue-300 rounded-xl 
+              text-lg font-semibold 
+              hover:bg-blue-600 hover:border-blue-600 
+              transition-all
+            ">
+              Learn More
+            </button>
           </div>
         </div>
+
       </div>
     </section>
-  )
+  );
 }

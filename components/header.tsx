@@ -16,10 +16,15 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <Image src="/images/pordozy.jpg" alt="Pordozy Logo" width={50} height={50} className="h-12 w-12 rounded-full" />
-            <span className="font-bold text-gray-900 dark:text-white text-xl">Dozy Mmobuosi</span>
-          </Link>
+<Link href="/" className="flex items-center gap-3 z-10">
+  <Image
+    src="/dozylog.png"
+    alt="Dozy Logo"
+    width={250} // normal width
+    height={250} // normal height
+    className="rounded-full"
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
