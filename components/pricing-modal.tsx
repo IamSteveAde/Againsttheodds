@@ -32,8 +32,8 @@ export function PricingModal({ isOpen, onClose }: PricingModalProps) {
 
   const pricing = {
     audiobook: { price: 15, currency: "£", name: "Audiobook" },
-    paperback: { price: 27, currency: "£", name: "Paperback" },
-    hardcover: { price: 39, currency: "£", name: "Hardcover" },
+    paperback: { price: 37, currency: "£", name: "Paperback" },
+    hardcover: { price: 49, currency: "£", name: "Hardcover" },
   }
 
   const selected = pricing[selectedFormat]

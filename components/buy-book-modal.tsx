@@ -54,8 +54,8 @@ export function BuyBookModal({ isOpen, onClose }: BuyBookModalProps) {
 
   const priceMap = {
     Audiobook: "£15",
-    Paperback: "£27",
-    Hardcover: "£39",
+    Paperback: "£37",
+    Hardcover: "£49",
   }
 
   return (
